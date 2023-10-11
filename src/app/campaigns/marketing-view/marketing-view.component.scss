@@ -1,0 +1,102 @@
+.top-row {
+    padding: 1em 0;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+
+.mat-button-base {
+    background-color: #640032;
+    margin-top: 1.2em;;
+    margin-right: 1em;
+    color: aliceblue;
+    ::ng-deep save {
+            background-color: #640032;
+            width: 20%;
+            margin-top: -3em;
+        }
+}
+
+.icon {
+    color: white;
+}
+
+.container{
+  width: 80%;
+}
+.container1 h2 {
+    font-size: 30px;
+    margin: 10px;
+    color: #696969;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: .8;
+    z-index: -1;
+}
+
+.row {
+    margin-left : 0.5em;
+}
+
+.row.between-xs {
+    margin-left: 8em;
+}
+
+
+.btn-remove-image {
+    position: absolute;
+    cursor: pointer;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: auto;
+    text-align: center;
+}
+
+.upload-btn {
+    margin-top: 2em;
+    align-content: flex-end;
+}
+
+.save{
+  background-color: #bc390a;
+}
+end-xs{
+  margin-left: 1%;
+}
+#example-radio-group-label{
+  font-size: 1.2em;
+}
+.mat-radio-button {
+  margin-left: 16px;
+  margin-top: 10px;
+  width: 6em;
+}
+// .form{
+//   background-color: #b91220;
+//   // width: 80%;
+// }
+
+::ng-deep .mat-step-header .mat-step-icon-state-number {
+  /* background-color: #ba2805; */
+  background-color: rgba(0, 0, 0, 0.54);
+  color: #fff;
+}
+
+::ng-deep .mat-step-header .mat-step-icon-selected,
+::ng-deep .mat-step-header .mat-step-icon-state-done,
+::ng-deep .mat-step-header .mat-step-icon-state-edit {
+  background-color: #ba2805;
+  color: #fff;
+}
+.mat-card-footer {
+  display: contents;
+  margin: 0 -16px -16px -16px;
+}
+  

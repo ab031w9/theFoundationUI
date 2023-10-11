@@ -1,0 +1,4 @@
+name: nodejs14nginx117
+description: Subatomic helm chart for nodejs14nginx117 applications
+apiVersion: v1
+version: 0.1.1

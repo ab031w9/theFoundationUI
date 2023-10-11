@@ -1,0 +1,22 @@
+table {
+    width: 100%;
+}
+
+.mat-button-base {
+    background-color: #b91220;
+}
+.search-input {
+    outline: none;
+    border: 1px solid darkgrey;
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+
+.search-input:active {
+    border: 1px solid darkgrey;
+}
+
+.search-input:focus {
+    border: 1px solid darkgrey;
+}

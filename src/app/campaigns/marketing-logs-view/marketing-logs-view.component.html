@@ -1,0 +1,22 @@
+<full-calendar #fullCalendar style="height: 450px;margin: 1em 1em;" [options]="calendarOptions">
+    <ng-template #eventContent let-arg>
+        <b>{{arg.timeText}}</b>
+        <i>{{arg.event.title}}</i>
+    </ng-template>
+</full-calendar>
+<div class="container">
+    <div class="row  between-xs">
+        <div class="col-xs-8">
+            <span class="dot"></span><h4 class="text">Greyed out Campaigns needs to be approved*</h4>
+        </div>
+        <div class="col-xs-">
+            <div class="button-class" *ngIf="!isAdmin">
+                <button mat-raised-button (click)="addCampaign()" color="primary">
+                    <mat-icon class="icon">add</mat-icon><span style="color:white"> Add New Campaign</span>
+                </button>
+            </div>
+            <div class="button-class" *ngIf="isAdmin">
+            </div>
+        </div>
+    </div>
+</div>

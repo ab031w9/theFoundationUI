@@ -1,0 +1,87 @@
+.top-row {
+    padding: 1em 0;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+.labels {
+  font-size: large;
+  margin-top: 2em;
+}
+
+.mat-button-base {
+    background-color: #640032;
+    margin-top: 1.2em;;
+    margin-right: 1em;
+    color: aliceblue;
+
+}
+
+.icon {
+    color: white;
+}
+
+.container{
+  width: 80%;
+}
+.container1 h2 {
+    font-size: 30px;
+    margin: 10px;
+    color: #696969;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: .8;
+    z-index: -1;
+}
+
+.row {
+    margin-left : 0.5em;
+    font-size: 12px;
+}
+
+.row.between-xs {
+    margin-left: 8em;
+}
+
+
+.btn-remove-image {
+    position: absolute;
+    cursor: pointer;
+    top: 2px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: auto;
+    text-align: center;
+}
+
+.upload-btn {
+    margin-top: -1em;
+    align-content: flex-start;
+}
+
+
+
+.save{
+  background-color: #bc390a;
+}
+end-xs{
+  margin-left: 1%;
+}
+#example-radio-group-label{
+  font-size: 1.2em;
+}
+.mat-radio-button {
+  margin-left: 16px;
+  margin-top: 10px;
+  width: 6em;
+}
+.mat-card-footer {
+  display: contents;
+  margin: 0 -16px -16px -16px;
+}

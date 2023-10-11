@@ -1,0 +1,27 @@
+@import "https://code.highcharts.com/css/highcharts.css";
+.chart-container {
+    padding: 20px;
+  }
+  /* .results-item-result {
+    display: block;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width: 120px;
+    font-size: 2rem;
+    color: #0079b8;
+    z-index: 5;
+    text-align: center;
+} */
+mat-card{
+  border-style: solid;
+border-color: #ca0065;
+border-width: 2px;
+}
+.highcharts-title{
+  fill: #ca0065;
+}
+
+.highcharts-color-1 {
+  fill: #bf0023;
+  stroke: #bf0023;
+}

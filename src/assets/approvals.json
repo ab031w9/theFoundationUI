@@ -1,0 +1,70 @@
+[
+    {
+        "id": 1,
+        "campaignId": "CN0000006",
+        "campaignName": "Purchase Insurance by scanning the QR Code - UI",
+        "ApprovedBy": "Minenhle Mpulo (ZA)",
+        "isApproved": false
+    },
+    {
+        "id": 2,
+        "campaignId": "CN0000007",
+        "campaignName": "Test Campaign",
+        "ApprovedBy": "Minenhle Mpulo (ZA)",
+        "DateApproved": "2023-03-18T08:00:43.511Z",
+        "isApproved": true
+    },
+    {
+        "id": 3,
+        "campaignId": "CN0000009",
+        "campaignName": "Valentines Day",
+        "ApprovedBy": "Minenhle Mpulo (ZA)",
+        "DateApproved": "2023-02-11T08:00:43.511Z",
+        "isApproved": true
+    },
+    {
+        "id": 4,
+        "campaignId": "CN0000012",
+        "campaignName": "RBB Pricing 2023",
+        "ApprovedBy": "Minenhle Mpulo (ZA)",
+        "isApproved": false
+    },
+    {
+        "id": 0,
+        "campaignId": "DEMO_0000",
+        "campaignName": "Pay Vehicle Fiance at an ATM",
+        "ApprovedBy": "",
+        "isApproved": false
+    },
+    {
+        "id": 0,
+        "campaignId": "DEMO_0000",
+        "campaignName": "Home Loans of up to 105%",
+        "ApprovedBy": "",
+        "isApproved": false
+    },
+    {
+        "id": 0,
+        "campaignId": "CN15",
+        "campaignName": "Freedom Day - 19th Anniversary",
+        "ApprovedBy": "Business Approver",
+        "isApproved": true,
+        "DateApproved": "2023-03-23T23:27:50.654Z"
+    },
+    {
+        "id": 1,
+        "campaignId": "CN16",
+        "campaignName": "Pay Vehicle Fiance at an ATM",
+        "ApprovedBy": "Business Approver",
+        "isApproved": true,
+        "DateApproved": "2023-03-24T07:27:29.557Z"
+    },
+    {
+        "id": 2,
+        "campaignId": "CN17",
+        "campaignName": "Demo Campaign ",
+        "ApprovedBy": "Business Approver",
+        "isApproved": true,
+        "DateApproved": "2023-03-24T09:14:21.492Z"
+    }
+]

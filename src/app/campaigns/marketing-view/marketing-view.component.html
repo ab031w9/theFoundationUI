@@ -1,0 +1,146 @@
+<div class="page-header">
+    <div class="container1">
+        <h2>
+            {{header}}
+        </h2>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-xs-12">
+            <!--Campagin Details-->
+            <!-- <form #campaignDetailsForm="ngForm" class="form">
+                <div class="row center-xs">
+                    <div class="col-xs-6">
+                        <mat-form-field appearance="outline">
+                            <mat-label>CampaignName </mat-label>
+                            <input type="text" [(ngModel)]="uiCampaign.campaignName" name="campaignName" matInput required>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>CampaignBy </mat-label>
+                            <input type="text" [(ngModel)]="uiCampaign.campaignBy" name="campaignBy" disabled="true" matInput>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Marketing Type </mat-label>
+                            <mat-select [(ngModel)] = "uiCampaign.screen" name="screenNumber" required>
+                                <mat-option *ngFor="let marketing of campaignLookup.marketingScreens; let i = index;" [value] = "campaignLookup.marketingScreens[i].screenType">
+                                    {{ marketing.marketingType }}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Screen Number</mat-label>
+                            <mat-select [(ngModel)] = "uiCampaign.screen" name="screenNumber">
+                                <mat-option *ngFor="let screen of campaignLookup.marketingScreens; let i = index;" [value] = "campaignLookup.marketingScreens[i].screenNumber">
+                                    {{ screen.screenNumber }}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Receiver Device Type </mat-label>
+                           <mat-select [(ngModel)] = "uiCampaign.channel" name="marketingChannel">
+                                <mat-option *ngFor="let device of campaignLookup.marketingChannel; let i = index;" [value] = "campaignLookup.marketingChannel[i].channel">
+                                    {{ device.channel }}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <div>
+                            <mat-card>
+                                <mat-grid-list cols="4" rowHeight="1:1">
+                                    <mat-grid-tile *ngFor="let img of uiCampaign.imageList; let i = index;">
+                                        <div  style="position:relative">
+                                            <span class="btn-remove-image" (click)="removeImages(i)">x</span>
+                                            <img [src]="img.url" width="70px" height="70px" alt="">
+                                        </div>
+                                    </mat-grid-tile>
+                                </mat-grid-list>
+                                <mat-error *ngIf="!checkImages || !uiCampaign.imageList.length">Please add marketing images*</mat-error>
+                            </mat-card>
+                        </div>
+                        <div class="upload-btn">
+                            <button mat-raised-button color="primary">
+                                <input
+                                    type="file"
+                                        multiple
+                                        (change)="onFileSelected($event)"
+                                        #selectFile
+                                        value = "select"
+                                    />
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-5" >
+                        <mat-card id="testing">
+                            <mat-calendar (selectedChange)="_onSelectedChange($event)"
+                            [selected]="selectedDateRange" required>
+
+
+                            </mat-calendar>
+                             <mat-error *ngIf="!checkDates">Please Select Campaign dates*</mat-error>
+                        </mat-card>
+                    </div>
+
+
+
+
+                  <div class="row">
+                    <div class="col-xs-12">
+                        <div class="class row between-xs" *ngIf="!isNewcampaign">
+                            <button mat-raised-button color="primary" (click)="onUpdate()">
+                                <mat-icon color="primary">save</mat-icon>Save
+                            </button>
+                            <button mat-raised-button color="warn" (click)="onDelete()">
+                                Delete
+                            </button>
+                        </div>
+                        <div class="class row end-xs" *ngIf="isNewcampaign">
+                            <button mat-raised-button (click) = "ActivatePreviewDialog()" color="primary">
+                                <mat-icon class="icon">preview</mat-icon><span style="color:white"> Preview Campaign</span>
+                            </button>
+                            <button mat-raised-button class="save" (click)="onAdd()"
+                            *ngIf="!!uiCampaign.campaignName &&
+                             !!uiCampaign.screen.screenNumber&&
+                             !!uiCampaign.screen.screenType &&
+                             !!uiCampaign.channel.channel &&
+                             !!checkDates">
+                                <mat-icon class="icon">save</mat-icon><span style="color:white"> Save Campaign</span>
+                            </button>
+                            <button mat-raised-button class="save" (click)="onAdd()"
+                            *ngIf="!uiCampaign.campaignName ||
+                             !uiCampaign.screen.screenNumber ||
+                             !uiCampaign.screen.screenType ||
+                             !uiCampaign.channel.channel ||
+                             !checkDates" disabled >
+                                <mat-icon class="icon">save</mat-icon><span style="color:white"> Save Campaign</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </form> -->
+
+            <mat-horizontal-stepper #stepper class="mat-elevation-z3">
+              <mat-step>
+                <ng-template matStepLabel>Personal Details</ng-template>
+                <app-campaign-targeted></app-campaign-targeted>
+              </mat-step>
+              <mat-step>
+                  <ng-template matStepLabel>Business Details</ng-template>
+                  <app-capture-campaign (myTest) = "testFunction($event)"></app-capture-campaign>
+              </mat-step>
+              <mat-step>
+                <ng-template matStepLabel>Documents</ng-template>
+                <app-marketing-screen></app-marketing-screen>
+              </mat-step>
+            </mat-horizontal-stepper>
+
+        </div>
+    </div>
+</div>
+
+
+

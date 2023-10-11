@@ -1,0 +1,158 @@
+/* carousel-slider.component.css */
+.carousel-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-slider__slides {
+  transition: transform 0.5s ease;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+/* .row {
+  margin-left : 2em;
+} */
+
+
+.a {
+  color: white;
+}
+
+.carousel-slider__slides img {
+    width: 50%;
+}
+
+.top-row {
+  padding: 1em 0;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+/* .mat-button-base {
+  background-color: #b91220;
+  width: 20%;
+} */
+
+/* .col-xs-4 {
+margin-top: 2em;
+} */
+
+.button-class {
+margin: 2em 0em 1em;
+}
+
+/* .main-image {
+  height: 400px;
+  margin-left: 3em;
+  margin-top: 3em;
+  border-radius: 8px;
+} */
+.main-image{
+  height: 250px;
+  border-radius: 8px;
+  width: -webkit-fill-available;
+}
+
+h2 {
+  font-size: 30px;
+  color: darkgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: .8;
+  z-index: -1;
+}
+
+.mat-button-base {
+background-color: #b93c7a;
+/* width: 20%; */
+color: aliceblue;
+margin-top: 0em;
+}
+
+.img-prev {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-slide {
+  display: inline-block;
+  width: 20%;
+  margin: 0 1px;
+
+}
+
+.img-slide img {
+  display: inline-block;
+  width: 100%;
+  margin: 0 1px;
+}
+
+.active {
+  border: 2px solid #090909;
+  opacity: 1;
+}
+
+.inactive {
+  opacity: 0.6;
+}
+
+.top-row {
+  padding: 1em 0;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+/*
+.mat-button-base {
+  background-color: #b91220;
+  width: 20%;
+  margin-top: -3em;
+} */
+
+.container{
+width: 80%;
+}
+
+.container1 h2 {
+  font-size: 30px;
+  margin: 10px;
+  color: darkgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: .8;
+  z-index: -1;
+}
+
+
+.carousel-slider__button:first-of-type {
+  left: 10px;
+}
+
+.carousel-slider__button:last-of-type {
+  right: 70px;
+}
+.start-xs{
+  margin-top: 30px;
+}
+
+.mat-card-footer{
+  margin: -15px -26px -16px 0px;
+}
+.mat-grid-tile{
+  padding: 11px;
+}
+
+.mat-elevation-z4{
+  padding-bottom: 30px;
+  width: 115px;
+}

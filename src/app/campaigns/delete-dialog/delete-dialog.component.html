@@ -1,0 +1,9 @@
+<!-- <h2 mat-dialog-title>Edit Campaign - {{campaignName}}</h2> -->
+    <mat-card>
+    <mat-dialog-content class="mat-typography">
+        <mat-error>The selected campaign {{campaignName}} will be Deactivated and won't appear on the Marketing Schedule, Confirm *</mat-error>
+        <button mat-button mat-dialog-close>Cancel</button>
+        <button mat-button class="approve" (click)="deactivateCampaignStatus()" [mat-dialog-close]="true">
+          <mat-icon class="icon">add</mat-icon> Deactivate Campaign</button>
+    </mat-dialog-content>
+    </mat-card>

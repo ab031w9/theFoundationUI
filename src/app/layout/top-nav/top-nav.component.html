@@ -1,0 +1,64 @@
+<mat-toolbar>
+    <div class="container">
+        <a routerLink="/" color="accent">
+            <img class="img"
+            src="/assets/Absa logo_Luxury_RGB_PNG.png"
+            alt=""
+            loading="lazy"
+          />
+        </a>
+      <a class="navbar-brand">The Foundation  Portal</a>
+      <!-- <a mat-flat-button (click)="logout()" *ngIf="isAuthenticated">
+        <mat-icon>account_box</mat-icon>
+        Logout
+    </a>  -->
+        <!-- <a routerLink="/campain" mat-flat-button>
+            Home
+        </a>  -->
+
+        <!-- <a routerLink="/campaign/add" mat-flat-button routerLinkActive="active">
+            <mat-icon>desktop_windows</mat-icon>
+            ATM Marketing
+        </a>
+        <a routerLink="/view" mat-flat-button routerLinkActive="active">
+            <mat-icon>calendar_today</mat-icon>
+            ATM Marketing Screens View
+        </a>
+        <a routerLink="/preview" mat-flat-button routerLinkActive="active">
+            <mat-icon>desktop_windows</mat-icon>
+            Preview Screen
+        </a>  -->
+        <!-- <a routerLink="/campaign" mat-flat-button>
+            <mat-icon>folder_open</mat-icon>
+            Logs
+        </a>  -->
+        <!-- <a routerLink="/login" mat-flat-button *ngIf="!isAuthenticated" routerLinkActive="active">
+            <mat-icon>account_box</mat-icon>
+            Login
+        </a>
+    -->
+
+          <div class="row end-xs" style="width: inherit;" *ngIf="isAuthenticated">
+                <button
+                  mat-button
+                  [matMenuTriggerFor]="menu"
+                >
+                  <img src="/assets/blank-profile.webp" alt="" class="user-image mr-1 p-2" *ngIf="isAuthenticated" />
+                  <mat-icon *ngIf="!isAuthenticated" >account_box</mat-icon>
+                  {{username}}
+                  <mat-icon class="user-image-icon ml-1"
+                    >keyboard_arrow_down</mat-icon
+                  >
+                </button>
+                <mat-menu #menu="matMenu">
+                  <button mat-menu-item (click)="logout()">
+                    <mat-icon>exit_to_app</mat-icon>
+                    Logout
+                  </button>
+                </mat-menu>
+          </div>
+
+    </div>
+</mat-toolbar>
+<mat-divider></mat-divider>
+<mat-divider></mat-divider>

@@ -1,0 +1,78 @@
+
+
+  <ng-template matStepLabel>Fill out Campaign Targeted</ng-template>
+  <mat-form-field appearance="outline">
+      <mat-label>FirstName</mat-label>
+      <input type="text"  name="firstname" matInput required>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="outline">
+    <mat-label>LastName</mat-label>
+    <input type="text"  name="firstname" matInput required>
+</mat-form-field>
+  <br>
+  <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input type="text"  name="firstname" matInput required>
+</mat-form-field>
+
+<br>
+<mat-form-field appearance="outline">
+  <mat-label>Phone number </mat-label>
+  <input type="text"  name="lastname"   matInput required>
+</mat-form-field>
+<br>
+<mat-form-field appearance="outline">
+  <mat-label>Loan Amount </mat-label>
+  <input type="text"  name="lastname"   matInput required>
+</mat-form-field>
+<br>
+
+
+  <div *ngIf="isTargetedCampaign === 'Yes'">
+    <div class="example-radio-group-label">for which agriculture product?</div>
+    <mat-radio-group aria-label="Select an option" [(ngModel)]="targetType" >
+      <mat-radio-button *ngFor="let target of targets" name="targetTypeRadio" [value]="target">{{target}}</mat-radio-button>
+    </mat-radio-group>
+
+    <div *ngIf="targetType === 'Region'">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Please select a region</mat-label>
+        <input type="text"
+               placeholder="Pick one"
+               aria-label="Number"
+               matInput
+               [formControl]="myControl"
+               [matAutocomplete]="auto" required>
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </div>
+    <!-- ATM -->
+    <div *ngIf="targetType === 'ATM'">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Please select a ATM</mat-label>
+        <input type="text"
+               placeholder="Pick one"
+               aria-label="Number"
+               matInput
+               [formControl]="myControl"
+               [matAutocomplete]="auto" required>
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filterOptions | async" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </div>
+
+
+<!-- </mat-form-field> -->
+   </div>
+<div>
+  <button mat-button matStepperNext (click)="navigateToCapture()" *ngIf="controlValid">Next</button>
+  <button mat-button matStepperNext (click)="navigateToCapture()" *ngIf="!controlValid" >Next</button>
+</div>

@@ -1,0 +1,38 @@
+# Default values for a nodejs14nginx117 app dev environment.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+replicaCount: 2
+
+resources:
+  requests:
+    memory: "100m"
+    cpu: "250m"
+  limits:
+    cpu: "512m"
+ingress:
+  gslb: "ac-portal.atm-marketing-dev.rbb-banking.nonprod.caas.absa.co.za"
+
+volumes:
+- name: ac-portal-settings-config
+  configMap:
+    name: ac-portal-settings-config
+volumeMounts:
+- name: ac-portal-settings-config
+  mountPath: /app/appsettings.json
+  subPath: appsettings.json
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ac-portal-settings-config
+
+data:
+    {
+      "Logging": {
+                      "LogLevel": {
+                      "Default": "Information",
+                      "Microsoft": "Warning",
+                      "Microsoft.Hosting.Lifetime": "Information"
+                    }
+      },
+     "AllowedHosts": "*"
+     }

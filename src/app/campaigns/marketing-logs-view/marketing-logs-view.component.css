@@ -1,0 +1,42 @@
+.top-row {
+    padding: 1em 0;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+.mat-button-base {
+    background-color: #640032;
+}
+
+.container {
+    width: 80%;
+}
+
+
+.button-class {
+    margin-right: -6em;
+}
+
+.fc .fc-toolbar-title {
+    font-size: 1.75em;
+    margin: 0;
+    color: #640032 !important;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: darkgrey;
+  border-radius: 50%;
+  /* display: block; */
+  display:inline-block;
+  margin-right:10px;
+}
+
+.text{
+  margin-top: 10px;
+  color: darkgrey;
+  display:inline-block;
+}

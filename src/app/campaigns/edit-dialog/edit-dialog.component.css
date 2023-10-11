@@ -1,0 +1,86 @@
+
+.approve {
+  background-color: white;
+  color: #640032;
+}
+
+mat-card{
+  border-style: solid;
+border-color: #ca0065;
+border-width: 1px;
+}
+
+.mat-dialog-content {
+  display: block;
+  margin: 0 -24px;
+  padding: 0 24px;
+  max-height: 80vh;
+  overflow: inherit;
+}
+
+
+.top-row {
+  padding: 1em 0;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+
+.mat-button-base  {
+  background-color: #640032;
+  margin-top: 1.2em;;
+  margin-right: 1em;
+  color: aliceblue;
+
+}
+.mat-stroked-button {
+  background-color: #640032;
+  color: white;
+}
+
+.icon {
+  color: white;
+}
+
+.container{
+width: 80%;
+}
+.container1 h2 {
+  font-size: 15px;
+  margin: 10px;
+  color: #696969;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: .8;
+  z-index: -1;
+}
+
+.save{
+background-color: #bc390a;
+}
+end-xs{
+margin-left: 1%;
+}
+#example-radio-group-label{
+font-size: 1.2em;
+}
+.mat-radio-button {
+margin-left: 16px;
+margin-top: 10px;
+width: 6em;
+}
+.mat-card-footer {
+  margin: 0 !important;
+}
+
+.outter-card
+{
+height: 535px;
+}
+
+
+
+  

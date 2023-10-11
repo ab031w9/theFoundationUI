@@ -1,0 +1,182 @@
+<div class="page-header">
+    <div class="container1">
+        <h2>
+            {{header}}
+        </h2>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- <div class="row">
+        <div class="col-xs-12"> -->
+            <!--Campagin Details-->
+            <!-- <form #campaignDetailsForm="ngForm" class="form">
+                <div class="row center-xs">
+                    <div class="col-xs-6">
+                        <mat-form-field appearance="outline">
+                            <mat-label>CampaignName </mat-label>
+                            <input type="text" [(ngModel)]="uiCampaign.campaignName" name="campaignName" *ngIf="!editMode" disabled="true" matInput>
+                            <input type="text" [(ngModel)]="uiCampaign.campaignName" name="campaignName" *ngIf="editMode" matInput>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>CampaignBy </mat-label>
+                            <input type="text" [(ngModel)]="uiCampaign.campaignBy" name="campaignBy" *ngIf="!editMode" disabled="true" matInput>
+                            <input type="text" [(ngModel)]="uiCampaign.campaignBy" name="campaignBy" *ngIf="editMode" matInput>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>screenNumber </mat-label>
+                            <input type="text" [(ngModel)]="uiCampaign.screen.screenNumber" name="screenNumber" *ngIf="!editMode" disabled="true" matInput>
+                            <input type="text" [(ngModel)]="uiCampaign.screen.screenNumber" name="screenNumber" *ngIf="editMode" matInput>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>marketingType </mat-label>
+                            <input type="text" [(ngModel)]="uiCampaign.screen.screenType" name="screenType" *ngIf="!editMode" disabled="true" matInput>
+                            <input type="text" [(ngModel)]="uiCampaign.screen.screenType" name="screenType" *ngIf="editMode" matInput>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>marketingChannel </mat-label>
+                            <input type="text" [(ngModel)]="uiCampaign.channel.channel" name="marketingChannel" *ngIf="!editMode" disabled="true" matInput>
+                            <input type="text" [(ngModel)]="uiCampaign.channel.channel" name="marketingChannel" *ngIf="editMode" matInput>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                          <mat-label>CampaignStartDate</mat-label>
+                          <input type="text" [(ngModel)]="uiCampaign.campaignStartDate" name="campaignStartDate" *ngIf="!editMode" disabled="true" matInput>
+                          <input type="text" [(ngModel)]="uiCampaign.campaignStartDate" name="campaignStartDate" *ngIf="editMode" matInput>
+                      </mat-form-field>
+                      <mat-form-field appearance="outline">
+                        <mat-label>CampaignEndDate</mat-label>
+                        <input type="text" [(ngModel)]="uiCampaign.campaignEndDate" name="campaignEndDate" *ngIf="!editMode" disabled="true" matInput>
+                        <input type="text" [(ngModel)]="uiCampaign.campaignEndDate" name="campaignEndDate" *ngIf="editMode" matInput>
+                    </mat-form-field>
+                        <div>
+                            <mat-card>
+                                <div class="img-prev text-center">
+                                    <div class="img-slide" *ngFor="let img of uiCampaign.imageList; let i = index;">
+                                        <img [src]="img.url" *ngIf="currentSlide == i" class="active"  alt="Preview Image" id="preview" imageView>
+                                        <img [src]="img.url" *ngIf="currentSlide != i" class="inactive" alt="Preview Image" id="preview" imageView>
+                                    </div>
+                                </div>
+                            </mat-card>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <mat-card>
+                            <img [src]="uiCampaign.imageList[currentSlide].url" class="main-image" alt="Preview Image">
+                        </mat-card>
+                    </div>
+                </div> -->
+
+                <!-- <div class="row">
+                    <div class="col-xs-8">
+                        <div class="button-class">
+                            <button mat-raised-button (click) = "viewCalendar()" color="primary">
+                                <mat-icon class="icon">calendar_month</mat-icon><span style="color:white"> Calendar View</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div> -->
+
+            <!-- </form>
+        </div>
+    </div> -->
+
+
+
+
+
+    <!-- <h2 mat-dialog-title>Edit Campaign - {{campaignName}}</h2> -->
+<mat-card>
+  <mat-dialog-content class="mat-typography">
+    <mat-horizontal-stepper #stepper class="mat-elevation-z3">
+      <mat-step>
+          <ng-template matStepLabel>Campaign Preview</ng-template>
+          <div class="row center-xs">
+             <div class="col-xs-6">
+                 <mat-form-field appearance="outline">
+                     <mat-label>Campaign Name </mat-label>
+                     <input type="text" [(ngModel)]="uiCampaign.campaignName" name="campaignName" matInput disabled="true">
+                 </mat-form-field>
+                 <mat-form-field appearance="outline">
+                     <mat-label>Campaign By </mat-label>
+                     <input type="text" [(ngModel)]="uiCampaign.campaignBy" name="campaignBy" disabled="true" matInput>
+                 </mat-form-field>
+                 <mat-form-field appearance="outline">
+                  <mat-label>Marketing Type </mat-label>
+                  <input type="text" [(ngModel)]="uiCampaign.screen.screenType" name="marketingType" disabled="true" matInput>
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>Screen Number </mat-label>
+                <input type="text" [(ngModel)]="uiCampaign.screen.screenNumber" name="screenNumber" disabled="true" matInput>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Receiver Device Type </mat-label>
+              <input type="text" [(ngModel)]="uiCampaign.channel.channel" name="receiverDeviceType" disabled="true" matInput>
+          </mat-form-field>
+             </div>
+             <div class="col-xs-5" >
+                 <mat-card id="testing">
+                     <mat-calendar
+                     [selected]="selectedDateRange" disabled>
+                     </mat-calendar>
+                 </mat-card>
+             </div>
+
+          </div>
+          <div class="row start-xs">
+            <button mat-button matStepperNext (click)="reLoadImageList()"
+            >Next</button>
+          </div>
+
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Marketing Images Screen</ng-template>
+        <div>
+          <mat-card>
+                <mat-card-title>
+                        Review Marketing Screens
+                </mat-card-title>
+                <mat-card-content>
+                    <mat-grid-list cols="4" rowHeight="1:1">
+                        <mat-grid-tile *ngFor="let img of uiCampaign.imageList; let i = index;">
+                            <div  style="position:relative">
+                                <mat-card class="mat-elevation-z4">
+                                    <mat-card-content>
+                                        <img [src]="img.url" width="115px" height="100px" alt="">
+                                    </mat-card-content>
+                                    <mat-card-footer>
+                                        <!-- <div class="row">
+                                            <label>Name: {{img.imageName}}</label>
+                                        </div> -->
+                                        <div class="row">
+                                            <label>Language: {{img.language.language}}</label>
+                                        </div>
+                                 <!--       <div class="row">
+                                            <label> Duration: {{img.duration}}</label>
+                                        </div>
+                                        <div class="row">
+                                            <label>Priority: {{img.priority}}</label>
+                                        </div> -->
+
+                                    </mat-card-footer>
+                                </mat-card>
+                            </div>
+                        </mat-grid-tile>
+                    </mat-grid-list>
+                </mat-card-content>
+                <mat-card-footer>
+
+            </mat-card-footer>
+          </mat-card>
+          <button mat-button matStepperPrevious>Back</button>
+        </div>
+      </mat-step>
+    </mat-horizontal-stepper>
+  </mat-dialog-content>
+  </mat-card>
+  <mat-dialog-actions align="end">
+    <button mat-stroked-button class="approve" [mat-dialog-close]="true" cdkFocusInitial (click)="backPreview()">
+    <span> Close</span></button>
+  </mat-dialog-actions>
+</div>

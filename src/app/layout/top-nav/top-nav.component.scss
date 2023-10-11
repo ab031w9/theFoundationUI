@@ -1,0 +1,92 @@
+.mat-button-base {
+    margin-right: 1em;
+    background-color: white;
+    margin-left: 2em;
+}
+.mat-toolbar {
+    background-color: white;
+    height: 10%;
+}
+
+.container {
+    display: contents;
+}
+
+.img {
+    height: 65px;
+    width: fit-content;
+    margin-top: 8px;
+}
+a.navbar-brand {
+    white-space: no-wrap;
+    text-align: center;
+    word-break: break-all;
+    color: #640032;
+    margin-left: 1em;
+  }
+
+  nav img {
+    /*border: 1px solid #ddd;
+    border-radius: 4px;*/
+    padding: 5px;
+    width: 60px;
+}
+
+a {
+    color: #640032;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+mat-divider {
+  z-index: 1;
+  border-color: #640032;
+}
+
+ul {
+  li {
+    list-style: none;
+  }
+}
+button {
+  outline: none;
+  border: 0;
+  background: transparent;
+}
+.user {
+  font-size: 14px;
+}
+mat-toolbar {
+  background: #f7f7f7;
+}
+.user-image {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  &-icon {
+    height: 18px;
+    font-size: 16px;
+  }
+}
+
+::ng-deep {
+  .mat-menu-content {
+    width: 160px;
+  }
+}

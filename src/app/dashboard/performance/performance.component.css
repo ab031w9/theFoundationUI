@@ -1,0 +1,12 @@
+.chart-container {
+    padding: 20px;
+  }
+
+  mat-card{
+    border-style: solid;
+  border-color: #ca0065;
+  border-width: 2px;
+  }
+  .highcharts-title{
+    fill: #ca0065;
+  }

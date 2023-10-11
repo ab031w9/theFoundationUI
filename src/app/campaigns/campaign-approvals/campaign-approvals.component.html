@@ -1,0 +1,91 @@
+<div class="page-header">
+    <div class="container">
+        <h1></h1>
+    </div>
+
+</div>
+
+<div class="container">
+    <div class="row end-xs mt-1">
+        <div class="col-xs-12">
+            <input type="text" class="search-input" placeholder="Search Campaign"
+            [(ngModel)] = "filterString"
+            (keyup)="filterApprovals()"
+            >
+        </div>
+    </div>
+    <div class="mat-elevation-z8">
+        <table mat-table matSort [dataSource]="dataSource">
+
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+
+            <!-- First Name Column -->
+            <ng-container matColumnDef="id" sticky>
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>
+              <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container>
+
+            <!-- First Name Column -->
+            <ng-container matColumnDef="campaignId" sticky>
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Campaign Id </th>
+                <td mat-cell *matCellDef="let element"> {{element.campaignId}} </td>
+                </ng-container>
+
+                            <!-- Email Column -->
+            <ng-container matColumnDef="campaignName">
+                <th mat-header-cell *matHeaderCellDef> Campaign Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.campaignName}} </td>
+                </ng-container>
+
+                                        <!-- Mobile Column -->
+                                        <ng-container matColumnDef="campaignBy">
+                                            <th mat-header-cell *matHeaderCellDef> Campaign By </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.campaignBy}} </td>
+                                            </ng-container>
+
+                            <!-- Approved Column -->
+                            <ng-container matColumnDef="isApproved" sticky>
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header> Approval Status </th>
+                                <td mat-cell *matCellDef="let element">
+                                    <mat-chip-list aria-label="selection">
+                                        <mat-chip *ngIf="element.isApproved" class="approved-chip">{{element.isApproved}}</mat-chip>
+                                        <mat-chip *ngIf="!element.isApproved" class="not-approved">{{element.isApproved}}</mat-chip>
+                                    </mat-chip-list>    
+                                    </td>
+                                </ng-container>
+
+                                <ng-container matColumnDef="ApprovedBy">
+                                    <th mat-header-cell *matHeaderCellDef> Approved By </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.ApprovedBy}} </td>
+                                    </ng-container>
+
+                                    <ng-container matColumnDef="DateApproved">
+                                        <th mat-header-cell *matHeaderCellDef> Date Approved </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.DateApproved | date:'mediumDate'}} </td>
+                                        </ng-container>
+
+                <!-- Approve Column -->
+                <ng-container matColumnDef="approve">
+                    <th mat-header-cell *matHeaderCellDef>  </th>
+                    <td mat-cell *matCellDef="let element; let i = index; ">
+
+                            <mat-icon matTooltip="Delete" (click) = "ActivateDeleteDialog([element, i])" >delete</mat-icon>
+                            <!-- <mat-icon matTooltip="Edit" (click) = "ActivatePreviewDialog(true)">edit</mat-icon> -->
+                            <mat-icon matTooltip="Preview" (click) = "ActivatePreviewDialog(element, false)">visibility</mat-icon>
+
+                    </td>
+                    </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; let i = index; columns: displayedColumns;"
+            ></tr>
+          </table>
+          <mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100] "
+              aria-label="Select page">
+</mat-paginator>
+    </div>
+</div>
+
+<!-- <iframe src="https://grafana.intra.absa.co.za:3000/d-solo/zHBVtYV7k/uat-all-events?orgId=1&from=1676964325045&to=1677137125045&panelId=2" width="450" height="200" frameborder="0"></iframe> -->

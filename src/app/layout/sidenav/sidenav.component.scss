@@ -1,0 +1,56 @@
+mat-sidenav-container {
+    height: 100vh;
+    margin-top: 20px;
+    mat-sidenav {
+      // background: #640032;
+      transition: all .5s ease;
+      z-index: 1;
+      mat-expansion-panel {
+        // background: #640032;
+      }
+      mat-nav-list {
+        .menu-item {
+          margin-left: 8px;
+          white-space: normal;
+          text-align: center;
+          word-break: break-all;
+          color: #640032;
+          // margin-left: 1em;
+        }
+
+        .is-active {
+          background-color: #640032b9;;
+          color:white;
+          border-radius: 10px;
+          // margin-left: -2px;
+
+            .menu-item {
+              margin-left: 8px;
+              white-space: normal;
+              text-align: center;
+              word-break: break-all;
+              color: #ffffff;
+              // margin-left: 1em;
+            }
+            mat-icon {
+              color: #fff;
+            }
+
+        }
+
+        .chevron-button {
+          transition: 300ms ease-in-out;
+          transform: rotate(0deg);
+          color: #640032;
+        }
+
+        .chevron-button.rotated {
+          transform: rotate(180deg);
+        }
+
+        mat-icon {
+          color: #640032;
+        }
+      }
+    }
+  }

@@ -1,0 +1,9 @@
+ <h2 mat-dialog-title>Preview Campaign - {{campaignName}}</h2> 
+<mat-dialog-content class="mat-typography">
+ <app-preview-screen></app-preview-screen>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Close</button>
+  <button mat-button class="approve" [mat-dialog-close]="true" cdkFocusInitial>
+    <mat-icon class="icon">thumb</mat-icon><span style="color:white"> Approve Campaign</span></button>
+</mat-dialog-actions>

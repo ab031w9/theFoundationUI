@@ -1,0 +1,65 @@
+<div class="row center-xs">
+  <!-- <div class="col-xs-2">
+  </div> -->
+   <div class="col-xs-6">
+
+
+      <ng-template matStepLabel>Fill out Campaign Targeted</ng-template>
+      <mat-form-field appearance="outline">
+        <mat-label>Entity Type </mat-label>
+       <mat-select [(ngModel)] = "uiCampaign.channel.id"  name="entityType" required>
+            <mat-option *ngFor="let entity of entityTypes">
+                {{entity}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br>
+       <mat-form-field appearance="outline">
+           <mat-label>Business Name </mat-label>
+           <input type="text" [(ngModel)]="uiCampaign.campaignName" name="businessName" matInput required>
+       </mat-form-field>
+       <br>
+       <mat-form-field appearance="outline">
+           <mat-label>Business Reg Number</mat-label>
+           <input type="text" [(ngModel)]="uiCampaign.campaignBy" name="BusinessRegNumber" matInput>
+       </mat-form-field>
+       <br>
+       <mat-form-field appearance="outline">
+        <mat-label>Business Type </mat-label>
+        <input type="text" [(ngModel)]="uiCampaign.campaignName" name="businessName" matInput required>
+    </mat-form-field>
+    <br>
+    <br>
+    <br>
+       <mat-form-field appearance="outline">
+           <mat-label>Business Name </mat-label>
+           <input type="text" [(ngModel)]="uiCampaign.campaignName" name="businessName" matInput required>
+       </mat-form-field>
+       <br>
+       <mat-form-field appearance="outline">
+           <mat-label>Business Name </mat-label>
+           <input type="text" [(ngModel)]="uiCampaign.campaignName" name="businessName" matInput required>
+       </mat-form-field>
+       <br>
+       <mat-form-field appearance="outline">
+           <mat-label>Business Name </mat-label>
+           <input type="text" [(ngModel)]="uiCampaign.campaignName" name="businessName" matInput required>
+       </mat-form-field>
+    
+   </div>
+   <div class="col-xs-5" >
+       <mat-card id="testing">
+           <mat-calendar (selectedChange)="_onSelectedChange($event)"
+           [selected]="selectedDateRange" [maxDate]="maxDate" required>
+        
+           </mat-calendar>
+            <mat-error *ngIf="!checkDates">Please Select Campaign dates*</mat-error>
+            <mat-error *ngIf="!testDates">Those dates are taken Campaign dates*</mat-error>
+       </mat-card>
+   </div>
+   <div class="row start-xs">
+    <button mat-button matStepperPrevious>Back</button>
+    <button mat-button matStepperNext
+    >Next</button>
+  </div>
+</div>

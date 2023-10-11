@@ -1,0 +1,31 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>
+            <img class="img"
+            src="/assets/Absa logo_Luxury_RGB_PNG.png"
+            alt=""
+            loading="lazy"
+          />
+        <h3>The Foundation Portal</h3>
+    </mat-card-title>
+      </mat-card-header>
+      <form class="example-form" (ngSubmit)="submit()">
+        <mat-card-content>
+          <mat-form-field class="example-full-width">
+            <input matInput [(ngModel)]="apiLoginModel.abNumber" name="username" placeholder="Username" required>
+              <mat-error>"Username Required!!"</mat-error>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput [(ngModel)]="apiLoginModel.password" name="password" placeholder="Password" type="password" required>
+            <mat-error>"Password Required!!"</mat-error>
+          </mat-form-field>
+          <!-- <p *ngIf="error" class="error">
+            {{ error }}
+          </p> -->
+        </mat-card-content>
+        <button *ngIf="!!apiLoginModel.abNumber && !!apiLoginModel.password" type="submit" mat-stroked-button  class="btn-block">Log in</button>
+        <button *ngIf="!apiLoginModel.abNumber || !apiLoginModel.password" type="submit" mat-stroked-button  class="btn-block" disabled>Log in</button>
+      </form>
+    </mat-card>
+  </div>

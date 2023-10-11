@@ -1,0 +1,66 @@
+<mat-sidenav-container autosize>
+    <mat-sidenav #sidenav mode="side" opened="isExpanded">
+      <mat-nav-list>
+        <!-- <mat-list-item (click)="isExpanded = !isExpanded">
+          <mat-icon mat-list-icon class="chevron-button" [ngClass]="{ rotated: isExpanded }">chevron_right
+          </mat-icon> <span class="menu-item" *ngIf="!isExpanded"> Expand </span> <span class="menu-item" *ngIf="isExpanded"> Collapse </span>
+        </mat-list-item> -->
+
+        <mat-list-item [routerLink]="'dashboard'" [routerLinkActive]="['is-active']">
+          <mat-icon mat-list-icon>home</mat-icon>
+          <span class="menu-item" *ngIf="!isExpanded">Dashboard</span>
+        </mat-list-item>
+
+        <!-- <mat-list-item [routerLink]="'logs'" [routerLinkActive]="['is-active']">
+          <mat-icon mat-list-icon>important_devices</mat-icon>
+          <span class="menu-item" *ngIf="!isExpanded">Production Support</span>
+        </mat-list-item> -->
+
+        <mat-expansion-panel [expanded]="!isExpanded" [class.mat-elevation-z0]="true">
+                <mat-expansion-panel-header>
+                  <mat-icon mat-list-icon>desktop_windows</mat-icon>
+                  <span class="menu-item" *ngIf="!isExpanded">Loaning </span>
+                </mat-expansion-panel-header>
+                <mat-nav-list>
+                  <mat-list-item [routerLink]="'atm-dashboard'" [routerLinkActive]="['is-active']">
+                    <mat-icon mat-list-icon>home</mat-icon>
+                    <span class="menu-item" *ngIf="!isExpanded">Creditor Dashboard</span>
+                  </mat-list-item>
+                  <div *ngIf="!isAdmin">
+                      <mat-list-item [routerLink]="'campaign/add'" [routerLinkActive]="['is-active']">
+                        <mat-icon mat-list-icon>add_to_photos</mat-icon>
+                        <span class="menu-item" *ngIf="!isExpanded">Farmer Details </span>
+                      </mat-list-item>
+                    </div>
+                  <!-- <mat-list-item [routerLink]="'preview'" [routerLinkActive]="['is-active']">
+                    <mat-icon mat-list-icon>preview</mat-icon>
+                    <span class="menu-item">Campaign Preview</span>
+                  </mat-list-item> -->
+                </mat-nav-list>
+        </mat-expansion-panel>
+        <div *ngIf="isAdmin">
+          <mat-expansion-panel [expanded]="false" [class.mat-elevation-z0]="true">
+            <mat-expansion-panel-header>
+              <mat-icon mat-list-icon>supervisor_account</mat-icon>
+              <span class="menu-item" *ngIf="!isExpanded">Admin</span>
+            </mat-expansion-panel-header>
+            <mat-nav-list>
+          <mat-list-item [routerLink]="'approvals'" [routerLinkActive]="['is-active']">
+            <mat-icon mat-list-icon>fact_check</mat-icon>
+            <span class="menu-item" *ngIf="!isExpanded">Approvals</span>
+          </mat-list-item>
+            </mat-nav-list>
+          </mat-expansion-panel>
+      </div>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <!-- Content - rendered Content for the current router path into the <router-outlet>, e.g. /dashboard or /info-->
+    <!-- <mat-sidenav-content>
+      <mat-toolbar>
+      </mat-toolbar>
+
+    </mat-sidenav-content> -->
+
+    <router-outlet></router-outlet>
+  </mat-sidenav-container>

@@ -1,0 +1,60 @@
+.container{
+  width: 90%;
+}
+table {
+  width: 100%;
+}
+
+.search-input {
+  outline: none;
+  border: 1px solid #a60053;
+  padding: 8px 10px;
+  margin-bottom: 15px;
+  border-radius: 3px;
+}
+
+.approved-chip{
+  background-color:rgb(49, 133, 49);
+  color: whitesmoke;
+}
+.not-approved{
+  background-color: #ba2805; 
+  color: whitesmoke;
+}
+
+.search-input:active {
+  border: 1px solid #BBB;
+}
+
+.search-input:focus {
+  border: 1px solid #BBB;
+}
+
+.mat-button-base {
+  background-color: #640032;
+}
+
+.approve {
+  background-color: #640032;
+}
+
+.reject {
+  background-color: #640032;
+}
+
+th{
+  color: #a60053;
+  font-size: 1em;
+}
+
+mat-icon{
+  margin-right: 5px;
+  color: #a60053;
+}
+mat-icon:hover{
+  cursor: pointer;
+}
+
+#search{
+  margin-top: 10px;
+}

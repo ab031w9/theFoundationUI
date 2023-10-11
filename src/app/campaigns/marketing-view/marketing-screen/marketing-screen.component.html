@@ -1,0 +1,45 @@
+<div>
+  <mat-card>
+        <mat-card-title>
+                Upload Supporting Documents
+        </mat-card-title>
+        <mat-card-content>
+            <div class="row">
+                <div class="col-xs-6">
+                   <mat-form-field appearance="outline" *ngIf="apiCampaign.screen.screenType === 'Transactional'" > 
+                        <mat-label class="labels">Document </mat-label>
+                        <mat-select [(ngModel)] = "screensModel.language.language" name="language" required>
+                            <mat-option *ngFor="let document of documentTypes; let i = index">
+                                {{document }}
+                            </mat-option>
+                        </mat-select>
+                   </mat-form-field> 
+                    <mat-form-field appearance="outline" *ngIf="apiCampaign.screen.screenType === 'Idle'" >
+                        <mat-label class="labels">Select Language </mat-label>
+                          <mat-select [(ngModel)] = "screensModel.language.language" name="language" required>
+                            <mat-option *ngFor="let language of IdleLanguages; let i = index;" [value] = "[language.id,i]">
+                                {{ language.language }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+
+            </div>
+        </mat-card-content>
+        <mat-card-footer>
+      
+       
+    </mat-card-footer>
+  </mat-card>
+</div>
+
+<div>
+    <div class="row start-xs" *ngIf="savuButtonIsActive">
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext (click)="onAdd()">Save</button>
+      </div>
+      <div class="row start-xs" *ngIf="!savuButtonIsActive">
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext (click)="onAdd()" disabled>Save</button>
+      </div>
+</div>

@@ -1,0 +1,98 @@
+mat-card-header{
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1em;
+  padding-top: 1em;
+  color: #640032;
+}
+.mat-card-header .mat-card-title {
+  font-size: 25px;
+  padding-top: 5px;
+}
+
+mat-card{
+border-style: solid;
+border-color: #ca0065;
+border-width: 1px;
+padding: 3px;
+}
+mat-card-subtitle {
+  font-size: 14px;
+  text-align: center;
+}
+fa-icon{
+  color: #640032f6;
+}
+mat-card-header-text {
+  margin: 0 6px !important;
+}
+mat-card{
+  border-style: solid;
+border-color: #ca0065;
+border-width: 1px;
+}
+th{
+  color: #fff;
+  font-size: 1em;
+}
+.search-input {
+  outline: none;
+  border: 1px solid #a60053;
+  padding: 5px 7px;
+  margin-bottom: 7px;
+  border-radius: 2px;
+}
+.subtitle{
+  color: #8f466a;
+  text-align: center;
+  font-size: 1.2em;
+}
+.mat-header-cell{
+  background-color: #8f466a;
+}
+
+.mat-table {
+
+  width: 100%;
+}
+/* .mat-cell {
+  text-align: center;
+} */
+
+.mat-column-address{
+
+  text-align: center;
+}
+.mat-column-version{
+
+  text-align: right;
+}
+.mat-column-region{
+
+  text-align: center;
+}
+.mat-icon {
+  font-size: 28px;
+  vertical-align: middle;
+  margin-right: 15px;
+  margin-bottom: 8px;
+}
+
+.row{
+  margin-top: 1em;
+  margin-left: 1em;
+}
+.section{
+    @media only screen and (max-width: 1600px) {
+      width: 80vw;
+    }
+    @media only screen and (max-width: 1500px) {
+      width: 76vw ;
+    }
+    @media only screen and (max-width: 1400px) {
+      width: 75vw;
+    }
+    @media only screen and (max-width: 1200px) {
+      width: 70vw ;
+    }
+}
